@@ -1,4 +1,36 @@
 <div class="col-md-6 col-md-offset-3">
+    <!-- <h2>Login</h2>
+    <form name="loginForm">
+        <div layout="column">
+            <md-input-container>
+                <label>User Name</label>
+                <input type="text" name="userName" ng-model="user.username" minlength="5" maxlength="15" required>
+                <div ng-message="loginForm.userName.$error">
+                    <div ng-message="required">
+                        User Name is required
+                    </div>
+                    <div ng-message="minlegth">
+                        User name is too short
+                    </div>
+                    <div ng-message="maxlength">
+                        User name is too long
+                    </div>
+                </div>
+
+            </md-input-container>
+            <md-input-container>
+                <label>Password</label>
+                <input type="password" name="passw" required ng-model="user.password">
+                <div ng-message="loginForm.passw.$error">
+                    <div ng-message="required">
+                        Passsword is required
+                    </div>
+                </div>
+            </md-input-container>
+            <md-button type="submit" class="md-raised md-primary" ng-click="login(loginForm)">Login</md-button>
+        </div>
+    </form> -->
+
     <h2>Login</h2>
     <form name="myForm" ng-submit="login(myForm)" role="form" novalidate>
         <div class="alert alert-danger" ng-if="isLoginError">{{loginErrorMsg}}</div>
@@ -16,4 +48,5 @@
             <button type="submit" class="btn btn-primary">Login</button>
         </div>
     </form>
+
 </div>

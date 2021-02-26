@@ -3,13 +3,30 @@
     display: block;
     font-size: 1.0em;
     margin: 4px 0 -10px;
-  }
-  hr {
+}
+
+hr {
     border-color: transparent;
-  }
-  .cap:first-letter {
-      text-transform: uppercase;
-  }
-  .alt {
-      background-color:#ccc;
-  }
+}
+
+.cap:first-letter {
+    text-transform: uppercase;
+}
+
+
+/* .alt {
+    background-color: #ccc;
+} */
+
+md-toolbar .md-button.md-icon-button .favorite-icon {
+    fill: #DE3641;
+}
+
+md-toolbar .md-button.md-icon-button .white-icon {
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    padding: 0px;
+}
