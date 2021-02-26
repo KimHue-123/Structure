@@ -29,12 +29,11 @@ app.controller('userCtrl', ['$scope', '$http', 'REST_API_SERVER', '$mdDialog', f
         let api = REST_API_SERVER + 'deleteDataTest'
         $http.post(api, JSON.stringify({ id: userId })).then(function(response) {
 
-            if (response.data)
-
+            if (response.data) {
                 $scope.msg = "Delete Successfully!";
-            console.log("msg: ", $scope.msg);
-            reloadDataTest();
-
+                console.log("msg: ", $scope.msg);
+                reloadDataTest();
+            }
         });
     }
     $scope.editUser = function(userId, $event) {
@@ -44,7 +43,8 @@ app.controller('userCtrl', ['$scope', '$http', 'REST_API_SERVER', '$mdDialog', f
                 parent: parentEl,
                 targetEvent: $event,
                 templateUrl: '/app/admin/views/editUser.html',
-                controller: 'editUserCtr'
+                controller: 'editUserCtr',
+                locals: { idEdit: userId }
             });
         }
         // $http.post('/api',JSON.stringify(userId)).then(function (response) {

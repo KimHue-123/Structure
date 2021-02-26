@@ -1,42 +1,28 @@
 <md-dialog aria-label="List dialog">
-    <md-dialog-content>
-        <h1>AAAAAAAAAAAAAAAA</h1>
-        <!-- <form name="loginForm">
-            <label>{{}}</label>
+    <md-dialog-content class="dialogContent">
+        <form name="formEdit" class="formUser">
+            <h3>Inform Edit</h3>
             <md-input-container>
+                <label>User Name</label>
+                <input type="text" ng-model="infor.userName" disabled>
+            </md-input-container><br>
 
+            <md-input-container>
+                <label>First Name</label>
+                <input type="text" ng-model="infor.firstName">
+            </md-input-container><br>
+            <md-input-container>
+                <label>Last Name</label>
+                <input type="text" ng-model="infor.lastName">
+            </md-input-container><br>
+            <md-input-container>
+                <label>Role</label>
+                <input type="text" ng-model="infor.roles">
             </md-input-container>
-            <div layout="column">
-                <md-input-container>
-                    <label>User Name</label>
-                    <input type="text" name="userName" ng-model="user.username" minlength="5" maxlength="15" required>
-                    <div ng-message="loginForm.userName.$error">
-                        <div ng-message="required">
-                            User Name is required
-                        </div>
-                        <div ng-message="minlegth">
-                            User name is too short
-                        </div>
-                        <div ng-message="maxlength">
-                            User name is too long
-                        </div>
-                    </div>
-    
-                </md-input-container>
-                <md-input-container>
-                    <label>Password</label>
-                    <input type="password" name="passw" required ng-model="user.password">
-                    <div ng-message="loginForm.passw.$error">
-                        <div ng-message="required">
-                            Passsword is required
-                        </div>
-                    </div>
-                </md-input-container>
-                <md-button type="submit" class="md-raised md-primary" ng-click="login(loginForm)">Login</md-button>
-            </div>
-        </form>  -->
+        </form>
     </md-dialog-content>
     <md-dialog-actions>
-        <md-button ng-click="closeDialog()" class="md-primary">Close dialog</md-button>
+        <md-button ng-click="closeDialog()" class="md-primary">Cancle</md-button>
+        <md-button ng-click="saveInforEdit()" class="md-primary">Save</md-button>
     </md-dialog-actions>
 </md-dialog>
